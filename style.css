@@ -27,7 +27,10 @@ body {
     justify-content: end;
     gap: 18px; 
 }
-
+.colons
+{
+    color: #8a11bf; font-size: 30px
+}
 .clock-img {
     grid-column: 1/3;
     grid-row: 1/2;
@@ -83,11 +86,20 @@ body {
     width: 152px;
 
 }
-
+#set-alarm-btn {
+    background: linear-gradient(to right, #6E54EC,#CB52F8);
+    border: #6E54EC;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    height: 49.5px;
+    border-radius: 4.5px;
+    padding: 15px 20px;  
+}
 .timer {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
     width: 100%;
     height: 100%;
     width: 449px;
@@ -96,6 +108,7 @@ body {
     background-color: #FFFFFF;
     gap: 10px;
     border: 1px solid #EDEDED;
+    flex-direction: column;
 }
 
 .boxes {
@@ -106,11 +119,7 @@ body {
     border-radius: 9.5px;
 }
 
-.lines {
-    margin: 0px 17.7px; 
-    height: 34px;
-    border: 1px solid #C2C2C2;
-}
+
 
 .all-names {
     color: #3D087B;
@@ -119,14 +128,9 @@ body {
 
 select {
     width: 199px;
+    border: 2px solid #EDEDED;
     padding: 14px;
-    border: 1px solid #EDEDED;
 }
-
-select:focus {
-    outline: none;
-}
-
 .all-icons {
     width: 34.5px;
 }
@@ -150,22 +154,15 @@ select:focus {
     margin-left: 24%;
     text-transform: uppercase;
 }
-#set-alarm-btn {
-    background: linear-gradient(to right, #6E54EC,#CB52F8);
-    border: #6E54EC;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    height: 49.5px;
-    border-radius: 4.5px;
-    padding: 15px 20px;  
-}
+
 #set-alarm-btn:hover
 {
     background-image: linear-gradient(to right,#CB52F8,#6E54EC);
     transition: none;  
 }
+ select:focus {
+    outline: none;
+ }
 .select-time {
     display: flex;
     flex-direction: column;
@@ -177,6 +174,11 @@ select:focus {
     border-radius: 9.5px;
     font-size: 19px;
     background-color: rgba(255, 255, 255, 0.244);
+}
+.lines {
+    margin: 0px 17.7px; 
+    height: 34px;
+    border: 2px solid #C2C2C2;
 }
 
 .right-container {
@@ -211,25 +213,25 @@ select:focus {
 }
 .digital-time-card .trasperant-box {
     position: absolute;
-    background-color: white;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.21;
     width: 80%;
-    border-radius: 9.5px;
     height: 80px;
+    border-radius: 9.5px;
     z-index: 1;
+    background-color: white;
 }
 .digital-time-card .trasperant-box-2 {
-    position: absolute;
-    background-color: white;
+    position: absolute;  
     top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
     opacity: 0.71;
     z-index: 2;
+    background-color: white;
 }
 
 .original-clock .select-time {
@@ -240,25 +242,11 @@ select:focus {
     flex-direction: column;
     width: 70px;
     height: 80px;
-    margin: 0px 15px;
+    margin: 0px 14.5px;
     gap: 11px;
 }
 
-.digital-time-card .original-clock {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    width: 100%;
-    height: 101px;
-    background-color: white;
-    border-radius: 9.5px;
-    transform: translate(-50%, -50%);
-     z-index: 3;
-}
+
 .original-clock .time-word {
     font-weight: 900;
     letter-spacing: 2px;
@@ -290,6 +278,22 @@ select:focus {
 #morning-img {
     width: 100%;
     border-radius: 10px;
+}
+
+.digital-time-card .original-clock {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: 101px;
+    border-radius: 9.5px;
+    transform: translate(-50%, -50%);
+     z-index: 3;
+     background-color: white;
 }
 
 .msg-card-2 {
@@ -357,7 +361,7 @@ select:focus {
     }
 
      .digital-clock {
-        width: 149px;
+        width: 148px;
 
     }
 
@@ -367,29 +371,23 @@ select:focus {
     }
 
     .all-names {
-        font-size: 15px;
+        font-size: 16px;
     }
-
+    .msg-card {
+        font-size: 17px;
+        padding: 0px 5px;
+    }
+    #set-alarm-btn {
+        width: 71%;
+    }
     select {
         width: 150px;
         border: 1px solid #EDEDED;
         padding: 15px;
     }
-
-    .msg-card {
-        font-size: 16px;
-        padding: 0px 5px;
-    }
-
-
-    #set-alarm-btn {
-        width: 70%;
-    }
-
     .select-time {
         padding: 10px;
     }
-
     .right-container {
         width: 100%;
         gap: 12px;
@@ -397,13 +395,6 @@ select:focus {
         align-content: stretch;
 
     }
-
-    .original-clock .select-time { 
-        margin: 0px 5px;
-        width: 50px;
-        height: 60px;
-    }
-
     #hours,#minutes,#seconds,
     #ampm {
         font-size: 15px;
@@ -417,40 +408,46 @@ select:focus {
         font-size: 18px;
     }
 
+    .original-clock .select-time { 
+        margin: 0px 5px;
+        width: 50px;
+        height: 60px;
+    }
+
 }
 
 @media screen and (min-width: 500px) and (max-width: 900px) {
 
     .left-container {
         gap: 20px;
+    } 
+   
+    select {
+        width: 285px;
+        border: 2px solid #EDEDED;
+        padding: 15px;
     }
     .timer {
         padding: 10px;
     }  
-    .original-clock .select-time {
-        width: 70px;
-        height: 80px;
-        margin: 0px 10px;
-    }
-    select {
-        width: 286px;
-        border: 1px solid #EDEDED;
-        padding: 15px;
-    }
     #hours,#minutes,#seconds,
     #ampm {
         font-size: 20px;
     }
-    .msg-card {
-        font-size: 20px;
-        padding: 0px 10px;
-    }
-
     .msg-card-2 {
         padding: 0px 10px;
     }
 
-    #new-msg-2 {
+    .msg-card {
         font-size: 20px;
+        padding: 0px 10px;
+    }
+    #new-msg-2 {
+        font-size: 21px;
+    }
+    .original-clock .select-time {
+        width: 71px;
+        height: 81px;
+        margin: 0px 10px;
     }
 }

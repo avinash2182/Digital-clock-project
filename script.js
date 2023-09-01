@@ -1,16 +1,13 @@
-function clock() {
-    // new key word--new key method is created while we are declaring the several objects or while declaring one king of constructor
-    let date = new Date(); //this is predefind method and date object represent the  date and time , it provides the method that work with date and time ,it contains hours,minuts,seconds,AM,PM all methods are given below
+function digitalclock() {
+    
+    let date = new Date(); 
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
   
     if (hours > 12) {
       hours = hours - 12;
-    }
-  
-    // console.log(hours, minutes, seconds);
-  
+    }  
     //assigning real time value to html elements
     let hrs = document.getElementById("hours");
     hrs.innerHTML = hours;
@@ -21,11 +18,11 @@ function clock() {
   }
   
   setInterval(() => {
-    clock();
+    digitalclock();
   }, 1000);
   
-  function rest() {
-    let date = new Date(); //this is predefind method and date object represent the  date and time , it provides the method that work with date and time ,it contains hours,minuts,seconds,AM,PM all methods are given below
+  function newtiming() {
+    let date = new Date(); 
     let hours = date.getHours();
   
     if (hours >= 12) {
@@ -97,5 +94,5 @@ function clock() {
   }
   
   setInterval(() => {
-    rest();
+    newtiming();
   }, 1000);
