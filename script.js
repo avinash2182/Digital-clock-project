@@ -8,7 +8,6 @@ function digitalclock() {
     if (hours > 12) {
       hours = hours - 12;
     }  
-    //assigning real time value to html elements
     let hrs = document.getElementById("hours");
     hrs.innerHTML = hours;
     let mins = document.getElementById("minutes");
@@ -16,7 +15,6 @@ function digitalclock() {
     let secs = document.getElementById("seconds");
     secs.innerHTML = seconds;
   }
-  
   setInterval(() => {
     digitalclock();
   }, 1000);
@@ -48,6 +46,7 @@ function digitalclock() {
     let button = document.getElementById("set-alarm-btn");
     button.addEventListener("mouseover", function () {
       this.innerText = "Party time";
+      // button.style.width = "default";
     });
     button.addEventListener("mouseout", function () {
       this.innerText = "Set Alarm";
@@ -76,7 +75,9 @@ function digitalclock() {
       else if (parseInt(nap.value) === hours) {
         document.getElementById("new-msg-2").innerHTML =
           "STOP YAWNING, GET SOME TEA.. IT'S JUST EVENING";
-        document.getElementById("morning-img").src = "./Component 32 – 1.svg";
+        // document.getElementById("morning-img").src = "./Component 32 – 1.svg";
+        document.getElementById("morning-img").src = "./lunch_image.png";
+
       }
        else if (parseInt(night.value) === hours) {
         document.getElementById("new-msg-2").innerHTML =
